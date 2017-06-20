@@ -18,7 +18,7 @@ struct tran
        }
 };	
 
-__global__ void initialize(const char* text, int *pos, int *mem int text_size) 
+__global__ void initialize(const char* text, int *pos, int *mem, int text_size)
 {
        int word=blockDim.x * blockIdx.x + threadIdx.x;
        if(word < text_size) 
